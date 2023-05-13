@@ -1,5 +1,4 @@
 import { TodoHeader } from 'components/todo-header/todo-header';
-import { TotalTodos } from 'components/todo-header/todo-header.styles';
 import { fireEvent, render } from '@testing-library/react';
 import { TodoContext } from 'context/context';
 
@@ -30,5 +29,24 @@ describe('Todo Header', () => {
 
     const percentageCompletedText = getByText(/33%/i);
     expect(percentageCompletedText).toBeInTheDocument();
+  });
+
+  it('should not render the chart when there are no todos', () => {
+    const setSearchValue = jest.fn();
+    const { queryByText } = render(
+      <TodoContext.Provider
+        value={{
+          searchValue: '',
+          setSearchValue,
+          totalTodos: 0,
+          completedTodos: 0,
+        }}
+      >
+        <TodoHeader />
+      </TodoContext.Provider>
+    );
+
+    const percentageCompletedText = queryByText(/Completed/);
+    expect(percentageCompletedText).toBeNull();
   });
 });
