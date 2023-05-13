@@ -10,7 +10,7 @@ import { FaTrashAlt } from 'react-icons/fa';
 import { HiCheck } from 'react-icons/hi';
 
 export const TodoItem = ({ isCompleted, text, deleteTodo, changeStatus }) => (
-  <ItemContainer>
+  <ItemContainer role="listitem">
     <ItemButtonCompleted
       type="button"
       completed={isCompleted}
