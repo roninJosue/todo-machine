@@ -32,10 +32,14 @@ export const TodoHeader = () => {
       <Header>
         <Search value={searchValue} onChange={onChange} />
         <TotalTodos>{totalTodos} TODOs</TotalTodos>
-        <TodoCompleted
-          percentageCompleted={((completedTodos / totalTodos) * 100).toFixed(0)}
-          data={data}
-        />
+        {totalTodos > 0 && (
+          <TodoCompleted
+            percentageCompleted={((completedTodos / totalTodos) * 100).toFixed(
+              0
+            )}
+            data={data}
+          />
+        )}
       </Header>
     </HeaderContainer>
   );
