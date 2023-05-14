@@ -1,6 +1,5 @@
-import { renderHook } from '@testing-library/react';
+import { renderHook, act } from '@testing-library/react';
 import { TodoContext, TodoProvider } from 'context/context';
-import { act } from 'react-dom/test-utils';
 import { useContext } from 'react';
 
 describe('Todo Context', () => {

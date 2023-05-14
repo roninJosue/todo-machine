@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle, css } from 'styled-components';
 import { normalize } from 'styled-normalize';
 import { device } from 'styles/utils';
 import { PRIMARY } from 'constants/colors';
@@ -27,4 +27,9 @@ export const GlobalStyles = createGlobalStyle`
     height: 100vh;
   }
 
+`;
+
+export const flex = css`
+  display: flex;
+  flex-direction: column;
 `;

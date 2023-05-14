@@ -6,6 +6,7 @@ import { H1 } from 'components/ui/HeadingStyled';
 import TodoAddButton from 'components/todo-add-button/todo-add-button';
 import { useState } from 'react';
 import Modal from 'components/ui/modal/modal';
+import { TodoForm } from 'components/todo-form';
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ function App() {
   return (
     <TodoProvider>
       <Modal isOpen={isOpen} onClose={toggleModal}>
-        <div>Test</div>
+        <TodoForm />
       </Modal>
       <H1>My Todos</H1>
       <TodoContainer>

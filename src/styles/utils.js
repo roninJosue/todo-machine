@@ -17,3 +17,16 @@ export const device = {
   laptopL: `(min-width: ${size.laptopL})`,
   desktop: `(min-width: ${size.desktop})`,
 };
+
+export const theme = {
+  button: {
+    primary: {
+      backgroundColor: '#4A148C',
+      color: '#fff',
+    },
+    error: {
+      backgroundColor: '#DC3545',
+      color: '#fff',
+    },
+  },
+};
