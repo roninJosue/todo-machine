@@ -16,8 +16,6 @@ export const TodoForm = ({ onSubmit, onCancel }) => {
     formState: { errors },
   } = useForm();
 
-  console.log(errors);
-
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Group>
@@ -31,7 +29,7 @@ export const TodoForm = ({ onSubmit, onCancel }) => {
           rows="5"
         />
         {errors?.todo?.message && (
-          <ErrorMessage>{errors?.todo?.message}</ErrorMessage>
+          <ErrorMessage rol="alert">{errors?.todo?.message}</ErrorMessage>
         )}
       </Group>
       <GroupButtons>

@@ -2,14 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { GlobalStyles } from 'styles';
+import { TodoProvider } from 'context/context';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// eslint-disable-next-line no-undef
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <GlobalStyles />
-    <App />
+    <TodoProvider>
+      <App />
+    </TodoProvider>
   </React.StrictMode>
 );
 

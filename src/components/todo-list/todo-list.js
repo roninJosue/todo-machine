@@ -9,7 +9,7 @@ export const TodoList = () => {
     <ListContainer data-testid="todo-list">
       {todos.map((todo) => (
         <TodoItem
-          key={`${todo.text}`}
+          key={todo.id}
           changeStatus={() => toggleTodo(todo.id)}
           text={todo.text}
           deleteTodo={() => removeTodo(todo.id)}

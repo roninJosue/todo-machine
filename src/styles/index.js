@@ -20,11 +20,14 @@ export const GlobalStyles = createGlobalStyle`
   }
   
   #root{
-    display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+
+    @media screen and ${device.mobileL} {
+      display: flex;
+    }
   }
 
 `;

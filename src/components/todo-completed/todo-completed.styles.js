@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { PRIMARY } from 'constants/colors';
+import { device } from 'styles/utils';
 
 export const Completed = styled.div`
   position: relative;
@@ -12,13 +13,21 @@ export const CompletedPercentage = styled.span`
   font-weight: bold;
   text-align: center;
   font-size: 1.6rem;
-  color: ${PRIMARY};
+  color: #fff;
+
+  @media screen and ${device.mobileL} {
+    color: ${PRIMARY};
+  }
 `;
 export const CompletedText = styled.span`
   font-weight: lighter;
   text-align: center;
   font-size: 0.9rem;
-  color: ${PRIMARY};
+  color: #fff;
+
+  @media screen and ${device.mobileL} {
+    color: ${PRIMARY};
+  }
 `;
 
 export const Container = styled.div`

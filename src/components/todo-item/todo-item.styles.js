@@ -20,10 +20,11 @@ export const ItemContainer = styled.div`
 export const ItemText = styled.span`
   font-weight: bold;
   text-align: left;
-  width: 100%;
+  width: calc(100% - 60px);
   margin-left: 0.5rem;
   text-decoration: ${({ completed }) => (completed ? 'line-through' : 'none')};
   word-wrap: break-word;
+  text-overflow: ellipsis;
 `;
 
 export const ItemButton = styled.button`
